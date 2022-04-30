@@ -8,6 +8,7 @@ sudo apt update
 sudo apt install git -y
 sudo apt install curl -y
 sudo apt install build-essential -y
+sudo apt install timeshift -y
 
 # environments
 sudo apt install python3 -y
