@@ -59,7 +59,7 @@ wget -O wallpaper.png https://github.com/linuxdotexe/nordic-wallpapers/raw/maste
 gsettings set org.gnome.desktop.background picture-uri $PWD/wallpaper.png
 
 # nord theme for gnome terminal
-git clone https://github.com/arcticicestudio/nord-gnome-terminal.git
-cd nord-gnome-terminal/src
+wget -O nord.sh https://raw.githubusercontent.com/arcticicestudio/nord-gnome-terminal/develop/src/nord.sh
+chmod +x ./nord.sh
 ./nord.sh
 
