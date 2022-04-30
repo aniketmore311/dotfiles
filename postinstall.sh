@@ -68,3 +68,8 @@ wget -O .dir_colors https://raw.githubusercontent.com/arcticicestudio/nord-dirco
 cp ./.dir_colors ~/.dir_colors
 echo "test -r ~/.dir_colors && eval \$(dircolors ~/.dir_colors)" >> ~/.bashrc
 source ~/.bashrc
+
+# nord theme for gedit
+wget -O nord.xml https://raw.githubusercontent.com/arcticicestudio/nord-gedit/develop/src/xml/nord.xml
+mkdir -p ~/.local/share/gedit/styles
+cp nord.xml ~/.local/share/gedit/styles/nord.xml
