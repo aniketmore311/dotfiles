@@ -8,7 +8,6 @@ sudo apt update
 sudo apt install git -y
 sudo apt install curl -y
 sudo apt install build-essential -y
-sudo apt install timeshift -y
 
 # environments
 sudo apt install python3 -y
@@ -29,6 +28,8 @@ sudo apt install tree -y
 sudo apt install synaptic -y
 sudo apt install gnome-tweaks -y
 sudo apt install chrome-gnome-shell -y
+sudo apt install vim -y
+sudo apt install timeshift -y
 
 # media codecs
 sudo apt install ubuntu-restricted-extras -y
