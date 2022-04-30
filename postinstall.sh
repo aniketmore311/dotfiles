@@ -34,7 +34,7 @@ wget -O papirus.tar.gz https://github.com/PapirusDevelopmentTeam/papirus-icon-th
 tar -xf papirus.tar.gz
 # move them to correct directories
 mkdir -p ~/.icons ~/.themes
-cp papirus-icon-theme-20220302/Papirus ~/.icons/Papirus
+cp -r papirus-icon-theme-20220302/Papirus ~/.icons/Papirus
 cp -r Nordic-bluish-accent-standard-buttons-v40/ ~/.themes/Nordic
 
 # set themes
