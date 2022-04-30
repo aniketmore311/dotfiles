@@ -22,7 +22,8 @@ gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 
 # set wallpaper
 wget -O wallpaper.png https://github.com/linuxdotexe/nordic-wallpapers/raw/master/wallpapers/BirdNord.png
-gsettings set org.gnome.desktop.background picture-uri $PWD/wallpaper.png
+sudo cp wallpaper.png /usr/share/backgrounds/nord_bird.png
+#gsettings set org.gnome.desktop.background picture-uri $PWD/wallpaper.png
 
 # nord theme for gnome terminal
 wget -O nord.sh https://raw.githubusercontent.com/arcticicestudio/nord-gnome-terminal/develop/src/nord.sh
@@ -39,3 +40,8 @@ source ~/.bashrc
 wget -O nord.xml https://raw.githubusercontent.com/arcticicestudio/nord-gedit/develop/src/xml/nord.xml
 mkdir -p ~/.local/share/gedit/styles
 cp nord.xml ~/.local/share/gedit/styles/nord.xml
+
+echo "further instructions: "
+echo "to change gedit theme to nord change it from gedit's preferences"
+echo "to change wallpaper select nord_bird.png wallpaper under appearance settings from gnome tweaks"
+echo "to change gnome terminal theme go to preferences and set the Nord profile as default profile"
