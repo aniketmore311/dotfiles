@@ -32,6 +32,7 @@ wget -O nordic.tar.xz https://github.com/EliverLara/Nordic/releases/download/v2.
 tar -xf nordic.tar.xz
 wget -O papirus.tar.gz https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/20220302.tar.gz
 tar -xf papirus.tar.gz
+
 # move them to correct directories
 mkdir -p ~/.icons ~/.themes
 cp -r papirus-icon-theme-20220302/Papirus ~/.icons/Papirus
@@ -41,4 +42,8 @@ cp -r Nordic-bluish-accent-standard-buttons-v40/ ~/.themes/Nordic
 gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+
+# set wallpaper
+wget -O wallpaper.png https://github.com/linuxdotexe/nordic-wallpapers/raw/master/wallpapers/BirdNord.png
+gsettings set org.gnome.desktop.background picture-uri $PWD/wallpaper.png
 
