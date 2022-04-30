@@ -42,6 +42,6 @@ mkdir -p ~/.local/share/gedit/styles
 cp nord.xml ~/.local/share/gedit/styles/nord.xml
 
 echo "further instructions: "
-echo "to change gedit theme to nord change it from gedit's preferences"
+echo "to change gedit's theme to nord change it from gedit's preferences"
 echo "to change wallpaper select nord_bird.png wallpaper under appearance settings from gnome tweaks"
 echo "to change gnome terminal theme go to preferences and set the Nord profile as default profile"

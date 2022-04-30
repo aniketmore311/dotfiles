@@ -18,3 +18,8 @@ echo \
 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+# aws cli
+wget -O awscliv2.zip "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip"
+unzip awscliv2.zip
+sudo ./aws/install
