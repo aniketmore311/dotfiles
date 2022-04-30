@@ -29,3 +29,6 @@ sudo apt install synaptic -y
 sudo apt install gnome-tweaks -y
 sudo apt install chrome-gnome-shell -y
 
+# media codecs
+sudo apt install ubuntu-restricted-extras -y
+
