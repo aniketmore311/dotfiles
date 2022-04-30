@@ -1,42 +1,8 @@
 #!/bin/bash -ex
 #
-# post install script to install packages and customize ubuntu after a fresh install
+# post install script to install and setup themes
 #
-# Author: Aniket More
-# GitHub: https://github.com/aniketmore311
-# Last Updated: 2022-04-30
-#
-# Usage:
-# $ wget https://raw.githubusercontent.com/aniketmore311/dotfiles/main/postinstall.sh
-# $ chmod +x ./postinstall.sh
-# $ ./postinstall.sh
-
 sudo apt update
-
-# tools
-sudo apt install git -y
-sudo apt install curl -y
-sudo apt install build-essential -y
-
-# environments
-sudo apt install python3 -y
-sudo apt install python3-pip -y
-sudo apt install default-jdk -y
-sudo apt install default-jre -y
-# nvm
-#curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-
-# snap packages
-sudo snap install code --classic
-sudo snap install chromium
-
-# extra tools
-sudo apt install tldr -y
-sudo apt install tree -y
-sudo apt install synaptic -y
-sudo apt install gnome-tweaks -y
-sudo apt install chrome-gnome-shell -y
 
 # download nordic and papirus themes
 wget -O nordic.tar.xz https://github.com/EliverLara/Nordic/releases/download/v2.1.0/Nordic-bluish-accent-standard-buttons-v40.tar.xz
