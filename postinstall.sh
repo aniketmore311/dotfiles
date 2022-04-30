@@ -22,6 +22,7 @@ sudo snap install chromium
 # extra tools
 sudo apt install tldr -y
 sudo apt install tree -y
+sudo apt install synaptic -y
 sudo apt install gnome-tweaks -y
 sudo apt install chrome-gnome-shell -y
 
