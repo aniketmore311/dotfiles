@@ -31,3 +31,7 @@ wget -O nordic.tar.xz https://github.com/EliverLara/Nordic/releases/download/v2.
 tar -xf nordic.tar.xz
 wget -O papirus.tar.gz https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/20220302.tar.gz
 tar -xf papirus.tar.gz
+# move them to correct directories
+mkdir -p ~/.icons ~/.themes
+cp papirus-icon-theme-20220302/Papirus ~/.icons/
+cp -r Nordic-bluish-accent-standard-buttons-v40/ ~/.themes/
