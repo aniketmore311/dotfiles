@@ -58,3 +58,8 @@ gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 wget -O wallpaper.png https://github.com/linuxdotexe/nordic-wallpapers/raw/master/wallpapers/BirdNord.png
 gsettings set org.gnome.desktop.background picture-uri $PWD/wallpaper.png
 
+# nord theme for gnome terminal
+git clone https://github.com/arcticicestudio/nord-gnome-terminal.git
+cd nord-gnome-terminal/src
+./nord.sh
+
