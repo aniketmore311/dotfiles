@@ -1,4 +1,7 @@
 #!/bin/bash -ex
+# post install script to install packages and customize ubuntu after a fresh install
+# Usage:
+# $ wget 
 
 sudo apt update
 
