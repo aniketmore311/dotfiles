@@ -63,3 +63,8 @@ wget -O nord.sh https://raw.githubusercontent.com/arcticicestudio/nord-gnome-ter
 chmod +x ./nord.sh
 ./nord.sh
 
+# nord dir_colors
+wget -O .dir_colors https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors
+cp ./.dir_colors ~/.dir_colors
+echo "test -r ~/.dir_colors && eval \$(dircolors ~/.dir_colors)" >> ~/.bashrc
+source ~/.bashrc
