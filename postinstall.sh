@@ -1,7 +1,15 @@
 #!/bin/bash -ex
+#
 # post install script to install packages and customize ubuntu after a fresh install
+#
+# Author: Aniket More
+# GitHub: https://github.com/aniketmore311
+# Last Updated: 2022-04-30
+#
 # Usage:
-# $ wget 
+# $ wget https://raw.githubusercontent.com/aniketmore311/dotfiles/main/postinstall.sh
+# $ chmod +x ./postinstall.sh
+# $ ./postinstall.sh
 
 sudo apt update
 
