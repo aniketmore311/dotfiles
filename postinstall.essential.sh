@@ -11,15 +11,15 @@ sudo apt install build-essential -y
 
 # environments
 sudo apt install python3 -y
+# create symlink from python3 to python
+sudo ln -s /usr/bin/python3 /usr/local/bin/python
 sudo apt install python3-pip -y
 sudo apt install default-jdk -y
 sudo apt install default-jre -y
 # nvm
-#curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # snap packages
-sudo snap install code --classic
 sudo snap install chromium
 
 # extra tools

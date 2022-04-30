@@ -4,6 +4,9 @@
 #
 sudo apt update
 
+# vscode
+sudo snap install code --classic
+
 # docker
 sudo apt-get remove docker docker-engine docker.io containerd runc -y
 sudo apt-get update
