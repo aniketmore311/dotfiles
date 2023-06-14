@@ -5,52 +5,54 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Set up the prompt
+# source antigen
+source ~/antigen.zsh
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+# zsh plugins
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
-setopt histignorealldups sharehistory
+# zsh themes
+antigen theme romkatv/powerlevel10k
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
-
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-# aliases
-alias ll="ls -l"
-alias la="ls -la"
-
-#TODO: add nvm
+antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# plugins (always source last thing in .zshrc)
-source ~/.zshplugins/zshplugins.zsh
+
+#nord dircolors
+test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
+
+#alias and functions
+
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ll='ls -alF'
+alias la='ls -aF'
+alias l='ls -F'
+
+alias ..='cd ..'       # Go up one directory
+alias ...='cd ../..'  # Go up two directories
+
+alias hg="history | grep $1"
+
+
+# mkdir and cd into it
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+fnd(){
+  find $1 -name $2
+}
+
+fndf(){
+  local dir="$1"
+  find "$dir" | fzf
+}
